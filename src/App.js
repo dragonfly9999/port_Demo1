@@ -1,21 +1,27 @@
+import { Route, Routes } from "react-router-dom";
+import DemoPort from "./templates/demoTemplates/DemoPort";
+import SkillDemo from "./components/demoComponents/SkillDemo";
+import DemoFc from "./components/checkDemos/DemoFc";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <div className="App">
+    //   <Header />
+    // </div>
+    <>
+      <Routes>
+        {/* khi đi vào trang chủ sẽ hiện thị component DemoFuntion */}
+        {/* <Route element={<Header />} path="/home" /> */}
+        {/* <Route element={<Header />} path="/">
+          <Route element={<DemoFc />} path="/demo" />
+        </Route> */}
+        <Route element={<DemoPort />} path="/">
+          {/* //Khi người dùng vừa truy cập vào đúng path của Route cha, sẽ tự động hiện thị cpmonent có thuộc tính index lên luôn  */}
+          <Route element={<DemoFc />} index />
+          <Route element={<SkillDemo />} path="skill" />
+        </Route>
+      </Routes>
+    </>
   );
 }
 
