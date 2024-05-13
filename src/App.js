@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import DemoPort from "./templates/demoTemplates/DemoPort";
 import SkillDemo from "./components/demoComponents/SkillDemo";
-import DemoFc from "./components/checkDemos/DemoFc";
+import DemoFc from "./page/DemoStruc/DemoFc";
 
 function App() {
   return (
