@@ -9,11 +9,11 @@ const HeaderDemo = () => {
   // };
   const checkLink2 = ({ isActive, isPending }) => {
     console.log(isActive);
-    return isActive ? "text-red-500" : "";
+    return isActive ? "text-violet-500" : "";
   };
 
   return (
-    <header className="bg-white">
+    <header className="bg-white border-b-2 border-black-500 ">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"

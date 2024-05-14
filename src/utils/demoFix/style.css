@@ -1,0 +1,54 @@
+/* Infor.js */
+
+.font-hover {
+  transition: font-weight 0.3s ease-in-out;
+}
+
+.font-hover:hover {
+  font-weight: bold;
+  color: rgb(167 139 250);
+}
+/* Avatar.js */
+.link-icon {
+  position: relative;
+  top: -5px;
+  right: 70px; /* Điều chỉnh giá trị này theo ý muốn */
+}
+.icon-demo {
+  display: inline-block;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+.icon-demo i {
+  color: black;
+  transition: 0.5s ease;
+  font-size: 20px;
+}
+.icon-demo i:hover {
+  color: rgb(196 181 253);
+}
+
+/* About.js */
+.tittle .underline {
+  text-decoration: none;
+}
+.tittle .underline::after {
+  content: "";
+  display: block;
+  width: 85%;
+  border-bottom: 3px solid rgb(233 213 255); /* Màu và độ dày của gạch chân */
+  margin: 0 auto; /* Canh giữa */
+  padding-top: 5px; /* Khoảng cách giữa chữ và gạch chân */
+}
+.left {
+  position: absolute;
+  left: 0;
+  top: 21%; /* Điều chỉnh giá trị này để căn chỉnh dọc nếu cần */
+  transform: translateX(-21%); /* Căn giữa dọc */
+  text-align: center;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  color: white;
+}

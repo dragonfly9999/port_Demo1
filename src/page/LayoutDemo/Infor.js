@@ -1,16 +1,22 @@
 import React from "react";
-import 'animate.css'
+import { motion } from "framer-motion";
+import "./../../utils/demoFix/style.css";
 
-const Infor = ({isDevImg, setIsDevImg}) => {
+const Infor = ({ isDevImg, setIsDevImg }) => {
   return (
-    <div className="w-3/5 mx-300 ml-40 font-sans animate__animated animate__fadeInDown">
-      <div className="infor-content ">
-        <h1 className="font-bold leading-normal text-4xl">
+    <div className="w-3/5 mx-300 ml-40 font-sans ">
+      <div className="infor-content">
+        <h1 className="font-bold leading-normal text-5xl">
           Hi, <br />
           I'm{" "}
-          <span className="text-red-300 font-normal hover:font-bold">
-            Ngoc Long
-          </span>
+          <motion.span
+            className="text-violet-400 font-normal font-hover"
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            Long Ngo
+          </motion.span>
           <br />
           Full Stack <br />
           Fresher <br />
@@ -22,9 +28,9 @@ const Infor = ({isDevImg, setIsDevImg}) => {
           onClick={() => {
             setIsDevImg(!isDevImg);
           }}
-          className="py-3 px-5 bg-blue-600 text-white rounded-lg"
+          className="py-3 px-8 bg-gray-600 text-white rounded-lg shadow hover:shadow-xl"
         >
-          Real Life
+          View Avatar
         </button>
       </div>
     </div>
