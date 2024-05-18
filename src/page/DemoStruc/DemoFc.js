@@ -10,7 +10,7 @@ const DemoFc = () => {
 
   return (
     <div>
-      <div className="container mx-auto flex items-center animate__animated animate__fadeInDown">
+      <div className="container mx-auto flex items-center">
         <Avatar isDevImg={isDevImg} setIsDevImg={setIsDevImg} />
         <Infor isDevImg={isDevImg} setIsDevImg={setIsDevImg} />
       </div>
