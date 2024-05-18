@@ -1,12 +1,15 @@
 import React from "react";
 import background from "./../../assets/image/imgDemo/bg-about.jpg";
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css";
+import './../../utils/demoFix/style.css'
 
 const About = () => {
   return (
     <div
       style={{
         backgroundImage: `url(${background})`,
-        height: "100vh",
+        height: "90vh",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         position: "relative", // Đảm bảo container chính có vị trí tương đối
@@ -14,6 +17,11 @@ const About = () => {
         borderRadius: "15px", // Thu hẹp đường viền
       }}
     >
+      <ScrollAnimation
+        animateIn=" animate__fadeInDown"
+        duration={4}
+        delay={750}
+      >
       <div className="container my-20 animate__animated animate__fadeInDown ">
         <div className="tittle  flex justify-center text-5xl font-bold text-purple-200">
           <h1 className="mt-3 underline">About</h1>
@@ -36,6 +44,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      </ScrollAnimation>
     </div>
   );
 };

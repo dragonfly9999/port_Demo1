@@ -1,3 +1,22 @@
+/* Header.js */
+
+.sticky-header {
+  position: -webkit-sticky; /* Cho Safari */
+  position: sticky;
+  top: 0;
+  background-color: white; /* Thay đổi màu nền tùy ý */
+  z-index: 1000; /* Đảm bảo header hiển thị trên các phần khác */
+  /* Các thuộc tính CSS khác cho header của bạn */
+  transition: height 7s ease;
+  /* padding: 0 ;
+  margin: 0; */
+}
+.sticky-header.scrolled {
+  height: 70px; /* Chwb(300 64% 35%) cao mới khi cuộn trang */
+  background-color: rgb(164, 165, 165);
+  /* padding: 0;
+  margin: 0; */
+}
 /* Infor.js */
 
 .font-hover {

@@ -1,5 +1,6 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
 import { NavLink } from "react-router-dom";
+import "./../../utils/demoFix/style.css";
 
 const HeaderDemo = () => {
   // const checkLink = ({ isActive, isPending }) => {
@@ -7,13 +8,44 @@ const HeaderDemo = () => {
   //   return;
   //   isActive ? "text-red-500" : "";
   // };
+  // const [isScrolled, setIsScrolled] = useState(false);
+
+  // const handleScroll = () => {
+  //   if (window.scrollY > 0) {
+  //     setIsScrolled(true);
+  //   } else {
+  //     setIsScrolled(false);
+  //   }
+  // };
+
+  // window.onscroll = handleScroll;
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const checkLink2 = ({ isActive, isPending }) => {
     console.log(isActive);
     return isActive ? "text-violet-500" : "";
   };
 
   return (
-    <header className="bg-white border-b-2 border-black-500 ">
+    <header className={`bg-white border-b-2 border-black-500 sticky-header ${
+      isScrolled ? "scrolled" : ""
+    }`}>
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"
@@ -51,14 +83,13 @@ const HeaderDemo = () => {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-          <NavLink
-            className={checkLink2}
-            to={"/"}
-          >
+          <NavLink className={checkLink2} to={"/"}>
             Home
           </NavLink>
           <NavLink to={"/"}>Project</NavLink>
-          <NavLink className={checkLink2} to={"/skill"}>Skill</NavLink>
+          <NavLink className={checkLink2} to={"/skill"}>
+            Skill
+          </NavLink>
           <NavLink to={"/"}>Contact</NavLink>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
