@@ -1,5 +1,5 @@
-import React,{useState, useEffect} from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, NavLink } from "react-router-dom";
 import "./../../utils/demoFix/style.css";
 
 const HeaderDemo = () => {
@@ -43,9 +43,11 @@ const HeaderDemo = () => {
   };
 
   return (
-    <header className={`bg-white border-b-2 border-black-500 sticky-header ${
-      isScrolled ? "scrolled" : ""
-    }`}>
+    <header
+      className={`bg-white border-b-2 border-black-500 sticky-header ${
+        isScrolled ? "scrolled" : ""
+      }`}
+    >
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"
@@ -93,9 +95,12 @@ const HeaderDemo = () => {
           <NavLink to={"/"}>Contact</NavLink>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Log in <span aria-hidden="true">→</span>
-          </a>
+          <Link
+            to={"/signUp"}
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
+            SignUp <span aria-hidden="true">→</span>
+          </Link>
         </div>
       </nav>
       {/* Mobile menu, show/hide based on menu open state. */}
