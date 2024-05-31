@@ -24,7 +24,7 @@ const FooterDemo = () => {
 
         <hr className="mb-2 border-gray-200 sm:mx-auto dark:border-gray-700 " />
         <div className="items-center">
-          <span className="block text-xl text-gray-500 sm:text-center dark:text-gray-400">
+          <span className="block text-xl text-gray-500 text-center dark:text-gray-400">
             © 2024 copyright Long Ngo
           </span>
         </div>

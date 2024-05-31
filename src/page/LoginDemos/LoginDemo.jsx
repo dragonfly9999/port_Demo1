@@ -6,6 +6,7 @@ import * as Yup from "yup";
 import { message } from "antd";
 import { saveLocalStore, getLocalStore } from "../../utils/local";
 import { Link, useNavigate } from "react-router-dom";
+import "../../utils/demoFix/style.css"
 
 const LoginDemo = () => {
   const [messageApi, contextHolder] = message.useMessage();
@@ -31,8 +32,10 @@ const LoginDemo = () => {
           });
 
           // Lưu thông tin đăng nhập vào localStorage
-          saveLocalStore({ isLoggedIn: true, taiKhoan: values.taiKhoan }, "user_login");
-          
+          saveLocalStore(
+            { isLoggedIn: true, taiKhoan: values.taiKhoan },
+            "user_login"
+          );
 
           // Chuyển hướng người dùng tới trang chủ
           setTimeout(() => {
@@ -70,8 +73,11 @@ const LoginDemo = () => {
             <div className="col_left">
               <Lottie options={defaultOptions} height={400} width={400} />
             </div>
-            <div className="col_right md:mx-4 sm:my-3">
-              <form onSubmit={handleSubmit} className="space-y-5 mr-5">
+            <div className="col_right ">
+              <form
+                onSubmit={handleSubmit}
+                className="fixDaForm space-y-5 mr-5 "
+              >
                 <h2 className="font-bold text-3xl block sm:text-center">
                   Login Now
                 </h2>

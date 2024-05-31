@@ -8,9 +8,9 @@ const ContactDemo = () => {
       <div className="border rounded-lg p-6">
         <div className="container">
           <div className="contact border-b pb-6 mb-6">
-            <div className="contactTitle flex justify-between items-start">
+            <div className="contactTitle flex flex-col md:flex-row justify-between items-start">
               <ScrollAnimation
-                className="w-1/3 pr-4"
+                className="w-full md:w-1/3 pr-4"
                 animateIn=" animate__fadeInDown"
                 duration={2}
                 delay={600}
@@ -25,7 +25,7 @@ const ContactDemo = () => {
                 </div>
               </ScrollAnimation>
               <ScrollAnimation
-                className=" contactContent w-2/3 pl-4 grid grid-cols-2 gap-3"
+                className=" contactContent w-full md:w-2/3 pl-4 grid grid-cols-1 md:grid-cols-2 gap-3"
                 animateIn=" animate__fadeInDown"
                 duration={4}
                 delay={700}
@@ -82,9 +82,9 @@ const ContactDemo = () => {
             </div>
           </div>
           <div className="location">
-            <div className="locationTitle flex justify-between items-start">
+            <div className="locationTitle flex flex-col md:flex-row justify-between items-start">
               <ScrollAnimation
-                className="w-1/3 pr-4"
+                className="w-full md:w-1/3 pr-4"
                 animateIn=" animate__fadeInDown"
                 duration={2}
                 delay={600}
@@ -100,7 +100,7 @@ const ContactDemo = () => {
                 </div>
               </ScrollAnimation>
               <ScrollAnimation
-                className="locationContent w-2/3 pl-4 grid grid-cols-1 gap-4"
+                className="locationContent w-full md:w-2/3 pl-4 grid grid-cols-1 gap-4"
                 animateIn=" animate__fadeInDown"
                 duration={4}
                 delay={700}

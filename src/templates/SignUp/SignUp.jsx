@@ -73,15 +73,15 @@ const SignUp = () => {
   return (
     <>
       {contextHolder}
-      <div className="h-screen flex justify-center items-center">
-        <div className="container">
-          <div className="grid grid-cols-2">
-            <div className="col_left mt-18">
-              <Lottie options={defaultOptions} height={500} width={500} />
+      <div className="h-screen flex justify-center items-center px-4">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="col_left mt-10 md:mt-18 flex justify-center">
+              <Lottie options={defaultOptions} height={300} width={300} />
             </div>
             <div className="col_right">
-              <form onSubmit={handleSubmit} className="space-y-2">
-                <h2 className="font-bold mb-5 text-3xl">Register</h2>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <h2 className="font-bold mb-5 text-2xl md:text-3xl">Register</h2>
                 <div>
                   <label
                     htmlFor="taiKhoan"
@@ -218,16 +218,16 @@ const SignUp = () => {
                     <p className="text-red-500 text-xs mt-1">{errors.soDt}</p>
                   ) : null}
                 </div>
-                <div>
+                <div className="flex flex-col md:flex-row items-center md:space-x-5">
                   <button
                     type="submit"
-                    className="  py-2 px-5 bg-black text-white rounded-md hover:bg-opacity-70 duration-500"
+                    className="py-2 px-5 bg-black text-white rounded-md hover:bg-opacity-70 duration-500"
                   >
                     Đăng ký
                   </button>
                   <Link
                     to={"/login"}
-                    className="ml-5 py-2 px-5 bg-black text-white rounded-md hover:bg-opacity-70 duration-500"
+                    className="mt-2 md:mt-0 py-2 px-5 bg-black text-white rounded-md hover:bg-opacity-70 duration-500"
                   >
                     Đăng nhập <span aria-hidden="true">→</span>
                   </Link>

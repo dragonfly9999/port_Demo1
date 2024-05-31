@@ -22,10 +22,8 @@ header .userTK {
   position: absolute;
   top: -30px;
 }
-.ghostContent{
-  background: red !important ;
-}
-.ghostContent a{
+
+.ghostContent a {
   display: block !important;
   z-index: 50 !important;
 }
@@ -41,11 +39,13 @@ header .userTK {
   color: rgb(167 139 250);
 }
 /* Avatar.js */
+
 .link-icon {
   position: relative;
   top: -5px;
-  right: 70px; /* Điều chỉnh giá trị này theo ý muốn */
+  left: 50px;
 }
+
 .icon-demo {
   display: inline-block;
   line-height: 50px;
@@ -123,3 +123,222 @@ header .userTK {
 /* .skill-group .mr-7 .mb-25{
   margin-bottom: 50px !important;
 } */
+
+@media screen and (max-width: 768px) {
+  /* Header.js  */
+  /* Thiết lập kích thước nhỏ lại cho header khi màn hình có chiều rộng nhỏ hơn 768px */
+  .sticky-header nav {
+    padding-left: 5px !important; /* Thay đổi padding */
+    z-index: 50;
+  }
+
+  .logo {
+    font-size: 18px; /* Thay đổi kích thước font cho logo */
+    margin: 0;
+  }
+
+  header .userTK {
+    position: absolute;
+    left: -79px;
+  }
+
+  .userTK button {
+    font-size: 10px;
+  }
+
+  /* Avatar.js  */
+  .imgDemo {
+    margin-left: 20px;
+    width: 380px !important;
+    height: 380px !important;
+  }
+  .link-icon {
+    margin-right: 100px;
+  }
+
+  /* Infor.js  */
+  .inforBox {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .inforBox .infor-content h1 {
+    font-size: 30px !important;
+  }
+  .inforBox .butDemo .butContent {
+    font-size: 17px;
+    padding: 15px 10px;
+  }
+
+  /* About.js  */
+  .aboutBox {
+    height: auto !important; /* Đặt chiều cao tự động để nội dung không bị tràn ra khỏi background */
+  }
+  .aboutBox .aboutContent {
+    margin-bottom: 0;
+  }
+  .aboutBox .aboutContent h1 {
+    font-size: 44px;
+    margin-top: 35px;
+  }
+
+  .left {
+    position: static; /* Đặt lại vị trí của phần tử */
+    transform: none; /* Đặt lại biến đổi */
+    padding-left: 2rem; /* Điều chỉnh padding theo nhu cầu */
+    padding-right: 2rem; /* Điều chỉnh padding theo nhu cầu */
+    margin-top: 20px;
+  }
+  .left .inforTD {
+    margin-top: 0px;
+    margin-bottom: 40px;
+  }
+  .left .inforTD .hocVan {
+    margin-top: 20px;
+  }
+  .left .butCV {
+    margin-top: 30px;
+  }
+
+  /* SkillDemo.js  */
+  .skillBox {
+    margin-left: 0 !important;
+  }
+
+  /* Login.jsx  */
+  .col_right .mr-5{
+    margin-left: 2rem;
+  } 
+
+  /* ContactDemo.js  */
+   .contact .contactContent{
+    margin-top: 20px;
+   }
+   .location .locationContent{
+    margin-top: 20px;
+   }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Header.js  */
+  .sticky-header nav {
+    padding-left: 5px !important; /* Thay đổi padding */
+    z-index: 50;
+  }
+  header .userTK {
+    position: absolute;
+    left: -79px;
+  }
+  /* DemoFc.js  */
+  .fixDaIpadAir {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+
+  /* Infor.js  */
+  .inforBox {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .inforBox .infor-content h1 {
+    font-size: 30px !important;
+  }
+  .inforBox .butDemo .butContent {
+    font-size: 17px;
+    padding: 15px 10px;
+  }
+
+  /* About.js */
+  .aboutBox {
+    height: 50vh !important; /* Đặt chiều cao tự động để nội dung không bị tràn ra khỏi background */
+  }
+  .aboutBox .aboutContent {
+    margin-bottom: 0;
+  }
+  .aboutBox .aboutContent h1 {
+    font-size: 44px;
+    margin-top: 35px;
+  }
+
+  .left {
+    position: static; /* Đặt lại vị trí của phần tử */
+    transform: none; /* Đặt lại biến đổi */
+    padding-left: 2rem; /* Điều chỉnh padding theo nhu cầu */
+    padding-right: 2rem; /* Điều chỉnh padding theo nhu cầu */
+    margin-top: 20px;
+  }
+  .left .inforTD {
+    margin-top: 0px;
+    margin-bottom: 40px;
+  }
+  .left .inforTD .hocVan {
+    margin-top: 20px;
+  }
+  .left .infor {
+    font-weight: normal;
+    font-size: 16px;
+    padding-right: 160px;
+  }
+  .left .butCV {
+    margin-top: 30px;
+    margin-right: 160px;
+  }
+}
+
+/* for ipadMini  */
+@media only screen and (min-width: 768px) and (max-width: 768px) and (min-height: 1024px) and (max-height: 1024px) {
+  /* About.js */
+  .left .infor {
+    font-weight: normal;
+    font-size: 16px;
+    padding-right: 185px;
+  }
+  .left .butCV {
+    margin-top: 30px;
+    margin-right: 206px;
+  }
+
+  /* SkillDemo.js  */
+  .skillUp {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+/* for ipadAir  */
+@media (min-width: 820px) and (max-width: 1108px) {
+  /* SkillDemo.js */
+  .skillUp .mr-20 {
+    margin-right: 0;
+    margin-left: 60px;
+  }
+}
+
+/* for ipadpro  */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
+  /* About.js  */
+  .aboutBox {
+    height: auto !important; /* Đặt chiều cao tự động để nội dung không bị tràn ra khỏi background */
+  }
+  .aboutBox .aboutContent {
+    margin-bottom: 0;
+  }
+  .aboutBox .aboutContent h1 {
+    font-size: 44px;
+    margin-top: 35px;
+  }
+
+  .left {
+    position: static; /* Đặt lại vị trí của phần tử */
+    transform: none; /* Đặt lại biến đổi */
+    padding-left: 2rem; /* Điều chỉnh padding theo nhu cầu */
+    padding-right: 2rem; /* Điều chỉnh padding theo nhu cầu */
+    margin-top: 20px;
+  }
+  .left .infor {
+    font-weight: normal;
+    font-size: 16px;
+    padding-right: 306px;
+  }
+  .left .butCV {
+    margin-top: 30px;
+    margin-right: 306px;
+  }
+}

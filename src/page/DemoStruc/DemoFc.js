@@ -10,9 +10,13 @@ const DemoFc = () => {
 
   return (
     <div>
-      <div className="container mx-auto flex items-center">
-        <Avatar isDevImg={isDevImg} setIsDevImg={setIsDevImg} />
-        <Infor isDevImg={isDevImg} setIsDevImg={setIsDevImg} />
+      <div className="container fixDaIpadAir mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-20">
+        <div>
+          <Avatar isDevImg={isDevImg} setIsDevImg={setIsDevImg} />
+        </div>
+        <div>
+          <Infor isDevImg={isDevImg} setIsDevImg={setIsDevImg} />
+        </div>
       </div>
       <div>
         <About />

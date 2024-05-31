@@ -71,7 +71,7 @@ const HeaderDemo = () => {
             <span className="logo ml-10 font-bold">Long Ngo</span>
           </a>
         </div>
-        <div className="relative lg:hidden ghostMenu">
+        <div className="relative lg:hidden ghostMenu mr-20">
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 bg-blue-500"
@@ -94,7 +94,7 @@ const HeaderDemo = () => {
             </svg>
           </button>
           {isMenuOpen && (
-            <div className="ghostContent absolute top-12 left-0 right-0  p-4 rounded-md shadow-md z-50">
+            <div className="ghostContent fixed top-20 bg-blue-950 text-white text-center left-0 right-0  p-4 rounded-md shadow-md z-50 opacity-75">
               <NavLink
                 className={checkLink2}
                 to={"/"}
@@ -143,17 +143,21 @@ const HeaderDemo = () => {
         <div className="lg:flex lg:flex-1 lg:justify-end relative">
           {username ? (
             <div className="text-center userTK">
-              <span className="text-sm font-semibold leading-6 text-blue-500 block">
-                Welcome, {username}
-              </span>
-              <button
-                className="py-1 px-2 bg-gray-600 text-white text-sm rounded-lg shadow hover:shadow-xl"
-                onClick={() => {
-                  handleLogout();
-                }}
-              >
-                Log out
-              </button>
+              <div>
+                <span className="nameTK text-sm font-semibold leading-6 text-blue-500 block">
+                  Hi, <span>{username}</span>
+                </span>
+              </div>
+              <div>
+                <button
+                  className="py-1 px-2 bg-gray-600 text-white text-sm rounded-lg shadow hover:shadow-xl"
+                  onClick={() => {
+                    handleLogout();
+                  }}
+                >
+                  Log out
+                </button>
+              </div>
             </div>
           ) : (
             <Link

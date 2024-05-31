@@ -8,7 +8,7 @@ import "animate.css";
 
 const Avatar = ({ isDevImg }) => {
   return (
-    <div className="w-2/5 px-auto ">
+    <div>
       <ScrollAnimation
         animateIn=" animate__fadeInDown"
         duration={2}
@@ -33,7 +33,7 @@ const Avatar = ({ isDevImg }) => {
             transition={{ duration: 0.5 }} // Thời gian chuyển đổi
           />
         </div>
-        <div className="link-icon flex items-start justify-end">
+        <div className="link-icon flex items-center justify-center">
           <a
             className="icon-demo"
             href="https://www.facebook.com/profile.php?id=100085857054052"

@@ -1,11 +1,11 @@
 import React from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css";
-import './../../utils/demoFix/style.css'
+import "./../../utils/demoFix/style.css";
 
 const Infor = ({ isDevImg, setIsDevImg }) => {
   return (
-    <div className="w-3/5 mx-300 ml-40 font-sans ">
+    <div className="inforBox">
       <ScrollAnimation
         animateIn=" animate__fadeInDown"
         duration={3}
@@ -30,7 +30,7 @@ const Infor = ({ isDevImg, setIsDevImg }) => {
             onClick={() => {
               setIsDevImg(!isDevImg);
             }}
-            className="py-3 px-8 bg-gray-600 text-white rounded-lg shadow hover:shadow-xl"
+            className="butContent py-3 px-8 bg-gray-600 text-white rounded-lg shadow hover:shadow-xl text-sm md:text-base lg:text-lg"
           >
             View Avatar
           </button>
