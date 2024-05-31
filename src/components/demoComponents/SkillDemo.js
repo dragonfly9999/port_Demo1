@@ -53,7 +53,7 @@ const SkillDemo = () => {
   return (
     <div className="my-20">
       <div className="container">
-        <div className=" skillUp grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+        <div className=" skillUp grid grid-cols-1 md:grid-cols-2 items-center gap-5">
           <div className="ml-20">
             <h1 className="text-9xl font-mono italic hover:not-italic text-gray-500">
               Skills
@@ -67,7 +67,7 @@ const SkillDemo = () => {
 
       <ScrollAnimation animateIn=" animate__fadeInDown" duration={3} delay={700}>
         <div className="container">
-          <div className=" skillBox grid grid-cols-1 md:grid-cols-2 gap-10 ml-20">
+          <div className=" skillBox grid grid-cols-1 md:grid-cols-2 gap-10 ml-10">
             {skillGroups.map((item, index) => (
               <div key={index} className="skill-group">
                 <div className="fixBor">

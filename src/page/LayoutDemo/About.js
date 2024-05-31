@@ -11,7 +11,7 @@ const About = () => {
         className="aboutBox"
         style={{
           backgroundImage: `url(${background})`,
-          height: "90vh",
+          height: "100vh",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           position: "relative",
