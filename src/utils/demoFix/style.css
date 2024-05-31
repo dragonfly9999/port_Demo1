@@ -17,6 +17,19 @@
   /* padding: 0;
   margin: 0; */
 }
+
+header .userTK {
+  position: absolute;
+  top: -30px;
+}
+.ghostContent{
+  background: red !important ;
+}
+.ghostContent a{
+  display: block !important;
+  z-index: 50 !important;
+}
+
 /* Infor.js */
 
 .font-hover {
@@ -64,10 +77,49 @@
 .left {
   position: absolute;
   left: 0;
-  top: 21%; /* Điều chỉnh giá trị này để căn chỉnh dọc nếu cần */
+  top: 50%; /* Điều chỉnh giá trị này để căn chỉnh dọc nếu cần */
   transform: translateX(-21%); /* Căn giữa dọc */
   text-align: center;
   padding-left: 20rem;
   padding-right: 20rem;
   color: white;
 }
+
+/* SkillDemo.js */
+.skill-group {
+  border: 2px solid #2980b9; /* Màu của border */
+  border-radius: 10px; /* Độ cong của border */
+  margin-bottom: 20px;
+}
+
+.skill-group .fixBor-tittle {
+  background-color: #2980b9; /* Màu nền của tiêu đề */
+  color: #fff; /* Màu chữ của tiêu đề */
+  padding: 10px; /* Khoảng cách giữa border và tiêu đề */
+  border-top-left-radius: 5px; /* Độ cong của góc trên bên trái */
+  border-top-right-radius: 5px; /* Độ cong của góc trên bên phải */
+}
+
+.skill-group .skill-description {
+  margin-top: 10px; /* Khoảng cách giữa tiêu đề và mô tả */
+  margin-bottom: 15px; /* Khoảng cách giữa mô tả và skill bars */
+}
+
+.skill-group .skill-description::before {
+  content: "";
+  display: block;
+  width: 50%;
+  border-bottom: 2px solid rgb(17 24 39); /* Màu của đường phân cách */
+  margin-bottom: 10px; /* Khoảng cách giữa đường phân cách và mô tả */
+}
+
+.skillbar .skillbar-percent {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  font-size: 11px;
+  line-height: inherit;
+}
+/* .skill-group .mr-7 .mb-25{
+  margin-bottom: 50px !important;
+} */

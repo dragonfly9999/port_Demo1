@@ -1,19 +1,34 @@
-import React from 'react'
-import HeaderDemo from '../../components/HeaderDemo/HeaderDemo'
-import FooterDemo from '../../components/FooterDemo/FooterDemo'
-import { Outlet } from 'react-router-dom'
+import React, { useState, useEffect } from "react";
+import HeaderDemo from "../../components/HeaderDemo/HeaderDemo";
+import FooterDemo from "../../components/FooterDemo/FooterDemo";
+import { Outlet } from "react-router-dom";
+import Loading from "../../page/Loading/Loading";
 
 const DemoPort = () => {
-  // set up một template dành cho tất cả các trang
-  // Phía trên là Header, ở giữa là nội dung các component, rồi đến footer
+  const [loading, setLoading] = useState(true);
+  const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, [isActive]);
+
   return (
+    <>
+      {loading ? (
+        <Loading />
+      ) : (
+        <div>
+          <HeaderDemo setIsActive={setIsActive} isActive={isActive} />
+          <Outlet />
+          <FooterDemo />
+        </div>
+      )}
+    </>
+  );
+};
 
-    <div>
-      <HeaderDemo />
-      <Outlet />
-      <FooterDemo />
-    </div>
-  )
-}
-
-export default DemoPort
+export default DemoPort;

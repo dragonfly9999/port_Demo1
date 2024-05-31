@@ -7,7 +7,7 @@ import { message } from "antd";
 import { saveLocalStore, getLocalStore } from "../../utils/local";
 import { Link, useNavigate } from "react-router-dom";
 
-const Login = () => {
+const LoginDemo = () => {
   const [messageApi, contextHolder] = message.useMessage();
   const navigate = useNavigate();
   const { handleSubmit, handleChange, handleBlur, values, errors, touched } =
@@ -29,6 +29,10 @@ const Login = () => {
             type: "success",
             content: "Đăng nhập thành công",
           });
+
+          // Lưu thông tin đăng nhập vào localStorage
+          saveLocalStore({ isLoggedIn: true, taiKhoan: values.taiKhoan }, "user_login");
+          
 
           // Chuyển hướng người dùng tới trang chủ
           setTimeout(() => {
@@ -140,4 +144,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginDemo;
