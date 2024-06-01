@@ -77,7 +77,7 @@ header .userTK {
 .left {
   position: absolute;
   left: 0;
-  top: 50%; /* Điều chỉnh giá trị này để căn chỉnh dọc nếu cần */
+  top: 120%; /* Điều chỉnh giá trị này để căn chỉnh dọc nếu cần */
   transform: translateX(-21%); /* Căn giữa dọc */
   text-align: center;
   padding-left: 20rem;
@@ -170,9 +170,9 @@ header .userTK {
   }
 
   /* About.js  */
-  .aboutBox {
-    height: auto !important; /* Đặt chiều cao tự động để nội dung không bị tràn ra khỏi background */
-  }
+  /* .aboutBox {
+    height: auto !important; 
+  } */
   .aboutBox .aboutContent {
     margin-bottom: 0;
   }
@@ -205,17 +205,23 @@ header .userTK {
   }
 
   /* Login.jsx  */
-  .col_right .mr-5{
+  .skillUp .ml-20 {
+    margin-left: 20px;
+  }
+  .skillUp .ml-20 h1{
+    font-size: 100px;
+  }
+  .col_right .mr-5 {
     margin-left: 2rem;
-  } 
+  }
 
   /* ContactDemo.js  */
-   .contact .contactContent{
+  .contact .contactContent {
     margin-top: 20px;
-   }
-   .location .locationContent{
+  }
+  .location .contactContent {
     margin-top: 20px;
-   }
+  }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
@@ -312,7 +318,14 @@ header .userTK {
 }
 
 /* for ipadpro  */
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
+@media only screen and (min-width: 1024px) and (max-width: 1024px) and (min-height: 1366px) and (max-height: 1366px) {
+  /* Header.js  */
+
+  header .userTK {
+    position: absolute;
+    left: 220px;
+  }
+
   /* About.js  */
   .aboutBox {
     height: auto !important; /* Đặt chiều cao tự động để nội dung không bị tràn ra khỏi background */
@@ -327,14 +340,35 @@ header .userTK {
 
   .left {
     position: static; /* Đặt lại vị trí của phần tử */
-    transform: none; /* Đặt lại biến đổi */
-    padding-left: 2rem; /* Điều chỉnh padding theo nhu cầu */
-    padding-right: 2rem; /* Điều chỉnh padding theo nhu cầu */
+    transform: translateY(-2%); /* Đặt lại biến đổi */
+    padding-left: 10px; /* Điều chỉnh padding theo nhu cầu */
+    padding-right: 6rem; /* Điều chỉnh padding theo nhu cầu */
     margin-top: 20px;
   }
   .left .infor {
     font-weight: normal;
     font-size: 16px;
+    padding-right: 306px;
+  }
+  .left .butCV {
+    margin-top: 30px;
+    margin-right: 306px;
+  }
+}
+/* for iphoneSE  */
+@media only screen and (min-width: 375px) and (max-width: 375px) and (min-height: 667px) and (max-height: 667px) {
+  /* About.js  */
+
+  #fixLeftDm {
+    position: absolute; /* Đặt lại vị trí của phần tử */
+    transform: translateY(-29%); /* Đặt lại biến đổi */
+    padding-left: 10px; /* Điều chỉnh padding theo nhu cầu */
+    padding-right: 6rem; /* Điều chỉnh padding theo nhu cầu */
+    margin-top: 20px;
+  }
+  .left .infor {
+    font-weight: normal;
+    font-size: 8px !important;
     padding-right: 306px;
   }
   .left .butCV {

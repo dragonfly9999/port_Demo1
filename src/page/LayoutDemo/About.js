@@ -11,7 +11,7 @@ const About = () => {
         className="aboutBox"
         style={{
           backgroundImage: `url(${background})`,
-          height: "100vh",
+          height: "90vh",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           position: "relative",
@@ -29,7 +29,7 @@ const About = () => {
               <h1 className="mt-3 underline">About</h1>
             </div>
 
-            <div className="left mt-12">
+            <div id="fixLeftDm" className="left ">
               <div className="tittle-content text-center leading-6 tracking-normal">
                 <div className="inforTD">
                   <p className="name px-9 text-3xl font-bold mb-8">Long Ngo</p>
@@ -88,7 +88,7 @@ const About = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex justify-center mt-3 butCV">
+              <div className="flex justify-center butCV mt-3">
                 <a
                   href="https://drive.google.com/file/d/1do8WjfinlSS-ym7GFHQlT_tERV4uW4pB/view?usp=sharing"
                   download
