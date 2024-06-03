@@ -208,7 +208,7 @@ header .userTK {
   .skillUp .ml-20 {
     margin-left: 20px;
   }
-  .skillUp .ml-20 h1{
+  .skillUp .ml-20 h1 {
     font-size: 100px;
   }
   .col_right .mr-5 {
@@ -222,6 +222,15 @@ header .userTK {
   .location .contactContent {
     margin-top: 20px;
   }
+
+  /* for iphoneSE  */
+@media screen and (max-width: 375px) and (max-height: 667px) {
+  /* About.js  */
+
+  .aboutBox .left .inforTD p {
+    color: red !important;
+  }
+}
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
@@ -254,7 +263,7 @@ header .userTK {
 
   /* About.js */
   .aboutBox {
-    height: 50vh !important; /* Đặt chiều cao tự động để nội dung không bị tràn ra khỏi background */
+    height: 50vh !important;
   }
   .aboutBox .aboutContent {
     margin-bottom: 0;
@@ -355,24 +364,4 @@ header .userTK {
     margin-right: 306px;
   }
 }
-/* for iphoneSE  */
-@media only screen and (min-width: 375px) and (max-width: 375px) and (min-height: 667px) and (max-height: 667px) {
-  /* About.js  */
 
-  #fixLeftDm {
-    position: absolute; /* Đặt lại vị trí của phần tử */
-    transform: translateY(-29%); /* Đặt lại biến đổi */
-    padding-left: 10px; /* Điều chỉnh padding theo nhu cầu */
-    padding-right: 6rem; /* Điều chỉnh padding theo nhu cầu */
-    margin-top: 20px;
-  }
-  .left .infor {
-    font-weight: normal;
-    font-size: 8px !important;
-    padding-right: 306px;
-  }
-  .left .butCV {
-    margin-top: 30px;
-    margin-right: 306px;
-  }
-}

@@ -37,18 +37,21 @@ const Avatar = ({ isDevImg }) => {
           <a
             className="icon-demo"
             href="https://www.facebook.com/profile.php?id=100085857054052"
+            target="_blank"
           >
             <i className="fa-brands fa-facebook"></i>
           </a>
           <a
             className="icon-demo mx-10"
             href="https://github.com/dragonfly9999"
+            target="_blank"
           >
             <i className="fa-brands fa-square-github"></i>
           </a>
           <a
             className="icon-demo"
             href="https://www.linkedin.com/in/wir-hen-593689309/"
+            target="_blank"
           >
             <i className="fa-brands fa-linkedin"></i>
           </a>

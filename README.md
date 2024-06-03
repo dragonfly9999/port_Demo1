@@ -11,4 +11,7 @@ update code hôpm nay check cái nhánh workNet\
 
 check lại cái nhánh khi ra net. 
 check
-
+NOTE:
+design partten
+model prenter, bright. 
+mvc, mv
