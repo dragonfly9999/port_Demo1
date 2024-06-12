@@ -21,8 +21,8 @@ const About = () => {
       >
         <ScrollAnimation
           animateIn="animate__fadeInDown"
-          duration={3}
-          delay={600}
+          duration={2}
+          delay={500}
         >
           <div className="container aboutContent my-20 animate__animated animate__fadeInDown">
             <div className="tittle flex justify-center text-5xl font-bold text-purple-200">

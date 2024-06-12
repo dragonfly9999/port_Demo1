@@ -36,10 +36,10 @@ const Avatar = ({ isDevImg }) => {
         <div className="link-icon flex items-center justify-center">
           <a
             className="icon-demo"
-            href="https://www.facebook.com/profile.php?id=100085857054052"
+            href="mailto:henwir42@gamil.com"
             target="_blank"
           >
-            <i className="fa-brands fa-facebook"></i>
+            <i className="fa-solid fa-envelope-open-text"></i>
           </a>
           <a
             className="icon-demo mx-10"
